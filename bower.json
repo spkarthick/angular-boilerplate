@@ -1,0 +1,30 @@
+{
+  "name": "angular-boilerplate",
+  "authors": [
+    "spkarthick <spkarthick91@gmail.com>"
+  ],
+  "description": "Simple boilerplate for angular applications",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "angular",
+    "boilerplate",
+    "starter",
+    "authentication"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+	  "angular": "1.5.0",
+	  "angular-ui-router": "0.2.15"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+	"lib"
+  ]
+}

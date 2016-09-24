@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AngularJS App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+  
+  <link rel="stylesheet" href="app.css">
+  <!-- View1 Component -->
+  <link rel="stylesheet" href="components/view1/view1.css">
+  <script src="components/view1/view1.js"></script>
+  <script src="components/view1/view1.service.js"></script>
+  <script src="components/view1/view1.controller.js"></script>
+  <script src="components/view1/view1.component.js"></script>
+  <!-- View1 Component End -->
+  
+  <!-- View2 Component -->
+  <link rel="stylesheet" href="components/view2/view2.css">
+  <script src="components/view2/view2.js"></script>
+  <script src="components/view2/view2.service.js"></script>
+  <script src="components/view2/view2.controller.js"></script>
+  <script src="components/view2/view2.component.js"></script>
+  <!-- View2 Component End -->
+  <script src="app.js"></script>
+</head>
+<body>
+  <div ui-view></div>
+</body>
+</html>
