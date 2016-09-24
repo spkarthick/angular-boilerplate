@@ -36,6 +36,26 @@ root
 ### Creating new Component
 To create new component run the component command with name parameter as shown below.
 
-```
+```shell
 gulp component --name "componentname"
+```
+After creating component make sure you refer the scripts in below order in index.html and add the new component's module as dependency in the main module in app.js.
+
+```html
+<!-- componentname Component -->
+<link rel="stylesheet" href="components/componentname/componentname.css">
+<script src="components/componentname/componentname.js"></script>
+<script src="components/componentname/componentname.service.js"></script>
+<script src="components/componentname/componentname.controller.js"></script>
+<script src="components/componentname/componentname.component.js"></script>
+<!-- componentname Component End -->
+```
+```javascript
+[app.js]
+
+var myApp = angular.module("myApp", [
+	"ui.router",
+	"view1",
+	"componentname"
+]);
 ```
