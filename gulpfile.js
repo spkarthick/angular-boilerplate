@@ -5,6 +5,9 @@ var removeCode = require('gulp-remove-code');
 var minify = require('gulp-minify');
 var concat = require('gulp-concat');
 var argv = require('yargs').argv;
+var openUrl = require('open');
+var connect = require('gulp-connect');
+var watch = require('gulp-watch');
 
 // define tasks here
 gulp.task('component', function() {
@@ -14,4 +17,15 @@ gulp.task('component', function() {
 			path.basename = path.basename.replace(/name/g, argv.name);
 		}))
         .pipe(gulp.dest('./components/' + argv.name));
+});
+
+gulp.task('serve', function() { 
+	connect.server({
+		root: ["."],
+		livereload: true,
+		// Change this to '0.0.0.0' to access the server from outside.
+		port: 9000
+	});
+	watch(['./components/**/*', './common/**/*']).pipe(connect.reload());
+	openUrl("http://localhost:9000");
 });
